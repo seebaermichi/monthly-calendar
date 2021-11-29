@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "seebaermichi/monthly-calendar",
+    "description": "A package which provides a monthly calendar with days and events depending on given months and events.",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "seebaermichi",
+        "monthly-calendar"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/seebaermichi/monthly-calendar",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Michael Becker",
+            "email": "micha.becker79@gmail.com",
             "role": "Developer"
         }
     ],
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Seebaermichi\\MonthlyCalendar\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Seebaermichi\\MonthlyCalendar\\Tests\\": "tests"
         }
     },
     "scripts": {
