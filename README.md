@@ -17,8 +17,15 @@ composer require seebaermichi/monthly-calendar
 ## Usage
 
 ```php
-$skeleton = new Seebaermichi\MonthlyCalendar();
-echo $skeleton->echoPhrase('Hello, Seebaermichi!');
+// Will return an array with the given months and their weeks and days
+// weeks will start with Monday
+$monthlyCalendar = new Seebaermichi\MonthlyCalendar(['December 2021', 'January 2022']);
+$calendar = $monthlyCalendar->getCalendar();
+
+// Will return an array with the given months and their weeks and days
+// weeks will start with Sunday
+$monthlyCalendar = new Seebaermichi\MonthlyCalendar(['February 1989', 'March 1989'], 'Sun');
+$calendar = $monthlyCalendar->getCalendar();
 ```
 
 ## Testing
