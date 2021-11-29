@@ -10,8 +10,7 @@ class MonthlyCalendar
     public function __construct(
         private array $months,
         private string $weekStartsWith = self::DEFAULT_WEEK_START
-    )
-    {
+    ) {
     }
 
     public function getCalendar($events = [], $eventInfo = '', $eventFormat = 'Y-m-d'): array
@@ -75,7 +74,7 @@ class MonthlyCalendar
             'day' => $weekday,
             'timestring' => $timestring,
             'date' => $date,
-            'event' => $event
+            'event' => $event,
         ];
     }
 }
