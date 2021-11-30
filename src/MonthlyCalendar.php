@@ -62,10 +62,15 @@ class MonthlyCalendar
             return self::WEEK_DAYS;
         }
 
-        $weekdays = array_chunk(self::WEEK_DAYS, array_search($this->weekStartsWith, self::WEEK_DAYS));
-        $weekdays = array_reverse($weekdays);
+        if (!in_array($this->weekStartsWith, self::WEEK_DAYS)) {
+            return self::WEEK_DAYS;
+        }
 
-        return array_values($weekdays);
+        $key = array_search($this->weekStartsWith, self::WEEK_DAYS);
+        $firstPart = array_slice(self::WEEK_DAYS, $key);
+        $lastPart = array_slice(self::WEEK_DAYS, 0, $key);
+
+        return array_merge($firstPart, $lastPart);
     }
 
     private function getDayData($weekday, $timestring = null, $date = null, $event = null): array
