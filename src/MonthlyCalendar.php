@@ -62,7 +62,7 @@ class MonthlyCalendar
             return self::WEEK_DAYS;
         }
 
-        if (!in_array($this->weekStartsWith, self::WEEK_DAYS)) {
+        if (! in_array($this->weekStartsWith, self::WEEK_DAYS)) {
             return self::WEEK_DAYS;
         }
 
