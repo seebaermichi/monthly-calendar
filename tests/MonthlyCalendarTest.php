@@ -63,7 +63,7 @@ it('can handle given events and set labels to the related days', function () {
         }
     }
 
-    $birthdays = array_values(array_filter($days, fn($day) => $day['event'] === $birthdayLabel));
+    $birthdays = array_values(array_filter($days, fn ($day) => $day['event'] === $birthdayLabel));
 
     expect(count($birthdays))->toBe(2);
     expect($birthdays[0]['event'])->toBe($birthdayLabel);
