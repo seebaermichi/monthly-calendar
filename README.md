@@ -26,6 +26,11 @@ $calendar = $monthlyCalendar->getCalendar();
 // weeks will start with Sunday
 $monthlyCalendar = new Seebaermichi\MonthlyCalendar(['February 1989', 'March 1989'], 'Sun');
 $calendar = $monthlyCalendar->getCalendar();
+
+// Provide simple array of events and event label to get related days labeled
+// First of December will have an event attribute 'birthday'
+$monthlyCalendar = new Seebaermichi\MonthlyCalendar(['December 2021']);
+$calendar = $monthlyCalendar->getCalendar(['2021-12-01'], 'birthday');
 ```
 
 ## Testing
