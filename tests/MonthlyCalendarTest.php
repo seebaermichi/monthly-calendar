@@ -47,3 +47,25 @@ it('can use default weekdays if weekday is not valid', function () {
 
     expect($firstWeekDay)->toBe('Mon');
 });
+
+it('can handle given events and set labels to the related days', function () {
+    $monthlyCalendar = new Seebaermichi\MonthlyCalendar\MonthlyCalendar(['January 2022']);
+    $birthdays = ['2022-01-02', '2022-01-13'];
+    $birthdayLabel = 'birthday';
+
+    $calendar = $monthlyCalendar->getCalendar($birthdays, $birthdayLabel);
+
+    $weeks = array_values($calendar['January 2022']);
+    $days = [];
+    foreach ($weeks as $week) {
+        foreach ($week as $weekdays) {
+            array_push($days, $weekdays);
+        }
+    }
+
+    $birthdays = array_values(array_filter($days, fn($day) => $day['event'] === $birthdayLabel));
+
+    expect(count($birthdays))->toBe(2);
+    expect($birthdays[0]['event'])->toBe($birthdayLabel);
+    expect($birthdays[1]['event'])->toBe($birthdayLabel);
+});
