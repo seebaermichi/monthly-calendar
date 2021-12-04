@@ -4,7 +4,7 @@
 [![Tests](https://github.com/seebaermichi/monthly-calendar/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/seebaermichi/monthly-calendar/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/seebaermichi/monthly-calendar.svg?style=flat-square)](https://packagist.org/packages/seebaermichi/monthly-calendar)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+This package returns a simple array with months, weeks and events depending on the months and events you provide. You can find a simple example here:  [https://monthly-calendar.michael-becker-berlin.de/api/v1/months/?months=December 2021,January 2022](https://monthly-calendar.michael-becker-berlin.de/api/v1/months/?months=December%202021,January%202022)
 
 ## Installation
 
